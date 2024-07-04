@@ -1,0 +1,1 @@
+this is a blog, you can create an account, share posts and comment on your friends
