@@ -25,11 +25,13 @@
   <!-- Render the navbar partial -->
   {{> navbar}}
   <!-- Render the banner partial -->
+  {{#unless loginpage}}
   {{> banner}}
   <!-- Render the hero partial -->
   {{> hero}}
   <!-- Render the blogs= partial -->
   {{> blogs}}
+  {{/unless}}
   <div class="flex-column justify-space-around">
     {{!-- <header class="display-flex justify-space-between align-center p-2">
       <h1>
@@ -48,6 +50,12 @@
     </header> --}}
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
+      <br>
+      <br>
+       <br>
+      <br>
+       <br>
+      <br>
       {{{ body }}}
     </main>
    {{> footer}}
