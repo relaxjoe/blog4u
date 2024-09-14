@@ -1,7 +1,10 @@
+const dayjs = require('dayjs');
 module.exports = {
   format_date: (date) => {
+    const newdate =dayjs(date).format('MMM' + ' ' + 'DD' + ', ' + 'YYYY');
+
     // Format date as MM/DD/YYYY
-    return date.toLocaleDateString();
+    return newdate;
   },
   format_amount: (amount) => {
     // format large numbers with commas

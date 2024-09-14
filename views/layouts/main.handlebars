@@ -10,13 +10,14 @@
     <title>Stand CSS Blog by TemplateMo</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-stand-blog.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/assets/css/templatemo-stand-blog.css">
+    <link rel="stylesheet" href="/assets/css/owl.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.13/dayjs.min.js"></script>
   {{!-- <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css"> --}}
 </head>
@@ -30,7 +31,7 @@
   <!-- Render the hero partial -->
   {{> hero}}
   <!-- Render the blogs= partial -->
-  {{> blogs}}
+  
   {{/unless}}
   <div class="flex-column justify-space-around">
     {{!-- <header class="display-flex justify-space-between align-center p-2">
@@ -50,12 +51,7 @@
     </header> --}}
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
-      <br>
-      <br>
-       <br>
-      <br>
-       <br>
-      <br>
+
       {{{ body }}}
     </main>
    {{> footer}}

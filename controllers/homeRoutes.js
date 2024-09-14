@@ -16,10 +16,12 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const projects = projectData.map((project) => project.get({ plain: true }));
-
+const latestPosting = projects.sort((a,b)=>b.date_created-a.date_created).filter ((project, index)=> index < 3); 
+console.log(latestPosting);
     // Pass serialized data and session flag into template
     res.render('homepage', { 
       projects, 
+      latestPosting,
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -42,6 +44,7 @@ router.get('/project/:id', async (req, res) => {
 
     res.render('project', {
       ...project,
+      loginpage: true,
       logged_in: req.session.logged_in
     });
   } catch (err) {
